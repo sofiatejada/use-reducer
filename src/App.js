@@ -1,5 +1,6 @@
 import React, { useReducer, useState } from 'react';
 import Todo from './Todo';
+import './index.css';
 
 export const ACTIONS = {
   ADD_TODO: 'add-todo',
@@ -41,7 +42,11 @@ export default function App() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <h1 className="text-3xl font-bold underline">Todo App</h1>
+      <form
+        className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           value={banana}
